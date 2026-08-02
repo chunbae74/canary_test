@@ -47,7 +47,7 @@ if [ -z "$RESPONSE" ]; then
 fi
 
 
-i# 1단계: 신규 버전에 카나리 10% 트래픽 최초 할당 후 시스템 지표 15초 관측 대기
+# 1단계: 신규 버전에 카나리 10% 트래픽 최초 할당 후 시스템 지표 15초 관측 대기
 if [ "$TARGET" == "green" ]; then update_nginx_weight 90 10; else update_nginx_weight 10 90; fi
 sleep 15
 
